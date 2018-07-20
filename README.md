@@ -1,4 +1,37 @@
-# CNN_Crops
+# PROYECTO: Tópicos en Inteligencia Artificial
+## Integrantes:
+* Rosa Yuliana Gabriela Paccotacya Yanque
+* Olenka Verónika Vargas Lazarte
+
+# CLASIFICACION DE CULTIVOS CON CNN
+
+## EXPERIMENTOS
+
+### DATASETS:
+Las imágenes satelitales para ambos datasets consisten de 26 imágenes SENTINEL 2A obtenidas del ESA SCIENTIFIC DATA HUB. Los datos se corrigieron atmosféricamente utilizando el paquete de software SEN2COR estándar. Para asegurar la comparabilidad con la serie LANDSAT, seleccionamos las bandas de resolución de distancia de muestreo de tierra de 10 m (GSD) (es decir, 2 azules, 3 verdes, 4 rojas, 8 infrarrojas cercanas) junto con las bandas GSD de 20 m (es decir, 11 de onda corta-infrarrojo-1, 12 de onda corta-infrarrojo-2) muestreados a 10 m GSD por KNN usando QGIS. La data puede ser encontrada en el siguiente link: http://weegee.vision.ucmerced.edu/datasets/landuse.html
+
+### IMPLEMENTACION:
+Dentro del preprocesamiento, se aplicará una corrección atmosférica utilizando el paquete de software SEN2COR estándar. Para asegurar la comparabilidad con la serie LANDSAT, se seleccionará las bandas de resolución de distancia de muestreo de tierra de 10 m (GSD) (es decir, 2 azules, 3 verdes, 4 rojas, 8 infrarrojas cercanas) junto con las bandas GSD de 20 m (es decir, 11 de onda corta-infrarrojo-1, 12 de onda corta-infrarrojo-2) muestreados a 10 m GSD por KNN usando QGIS.
+
+<img src="/images/pipline.png" alt="Screenshot3"/>
+
+Configuración de hyper parametros θc = (lc, rc) 
+Los hiperparámetros se eligieron mediante una búsqueda de cuadrícula, de modo que todas las combinaciones de la cantidad de capas de red s lc ∈ {2, 3, 4} y número de celdas por capa rc ∈ {110, 165, 220, 330, 440} testeadas.
+
+Aunque cada capa se podría inicializar con un número diferente de celdas, lo que podría beneficiar a la clasificación, optamos por mantener la complejidad de la búsqueda de grillas moderada y aplicar el mismo número de celdas a cada capa. Para reducir el sobreajuste en los datos de entrenamiento presentados, agregamos la normalización drop_out para mantener probabilidad pkeep = 0.5.
+ θCNN = (3, 440) 
+ 
+ ### Especificaciones del Equipo
+
+* Intel(R) Core(TM) i7-4700MQ CPU @ 2.40GHz 64 bits
+* 8GB RAM
+* Ubuntu 16.04
+
+### Requerimientos
+* Instalar requerimientos.txt
+
+
+## CNN
 
 Las CNN pasan la imagen a través de una serie de varias capas de pequeñas colecciones de neuronas/kernels donde cada una de ellas mira una pequeña porción de una imagen y obtiene un resultado. El resultado puede ser una clase única o un conjunto de probabilidades de clase que mejor describa la imagen. Típicamente, las CNN usan pequeños núcleos convolucionales. En consecuencia, las CNN implican menos parámetros que las redes neuronales completamente conectadas [1]. Las arquitecturas CNN más simples se muestran en la figura 
 
@@ -14,31 +47,6 @@ La capa final en un CNN contiene un solo nodo para cada clase. Las arquitecturas
 
 <img src="/images/vector.png" alt="Screenshot2"/>
 
-
-# EXPERIMENTOS
-
-## DATASETS:
-Las imágenes satelitales para ambos datasets consisten de 26 imágenes SENTINEL 2A obtenidas del ESA SCIENTIFIC DATA HUB. Los datos se corrigieron atmosféricamente utilizando el paquete de software SEN2COR estándar. Para asegurar la comparabilidad con la serie LANDSAT, seleccionamos las bandas de resolución de distancia de muestreo de tierra de 10 m (GSD) (es decir, 2 azules, 3 verdes, 4 rojas, 8 infrarrojas cercanas) junto con las bandas GSD de 20 m (es decir, 11 de onda corta-infrarrojo-1, 12 de onda corta-infrarrojo-2) muestreados a 10 m GSD por KNN usando QGIS. La data puede ser encontrada en el siguiente link: http://weegee.vision.ucmerced.edu/datasets/landuse.html
-
-## IMPLEMENTACION:
-Dentro del preprocesamiento, se aplicará una corrección atmosférica utilizando el paquete de software SEN2COR estándar. Para asegurar la comparabilidad con la serie LANDSAT, se seleccionará las bandas de resolución de distancia de muestreo de tierra de 10 m (GSD) (es decir, 2 azules, 3 verdes, 4 rojas, 8 infrarrojas cercanas) junto con las bandas GSD de 20 m (es decir, 11 de onda corta-infrarrojo-1, 12 de onda corta-infrarrojo-2) muestreados a 10 m GSD por KNN usando QGIS.
-
-<img src="/images/pipline.png" alt="Screenshot3"/>
-
-Configuración de hyper parametros θc = (lc, rc) 
-Los hiperparámetros se eligieron mediante una búsqueda de cuadrícula, de modo que todas las combinaciones de la cantidad de capas de red s lc ∈ {2, 3, 4} y número de celdas por capa rc ∈ {110, 165, 220, 330, 440} testeadas.
-
-Aunque cada capa se podría inicializar con un número diferente de celdas, lo que podría beneficiar a la clasificación, optamos por mantener la complejidad de la búsqueda de grillas moderada y aplicar el mismo número de celdas a cada capa. Para reducir el sobreajuste en los datos de entrenamiento presentados, agregamos la normalización drop_out para mantener probabilidad pkeep = 0.5.
- θCNN = (3, 440) 
- 
- ## Especificaciones del Equipo
-
-* Intel(R) Core(TM) i7-4700MQ CPU @ 2.40GHz 64 bits
-* 8GB RAM
-* Ubuntu 16.04
-
-## Requerimientos
-* Instalar requerimientos.txt
  
  ## RESULTADOS:
  
