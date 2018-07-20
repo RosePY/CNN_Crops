@@ -18,7 +18,7 @@ La capa final en un CNN contiene un solo nodo para cada clase. Las arquitecturas
 # EXPERIMENTOS
 
 DATASETS:
-Las imágenes satelitales para ambos datasets consisten de 26 imágenes SENTINEL 2A obtenidas del ESA SCIENTIFIC DATA HUB. Los datos se corrigieron atmosféricamente utilizando el paquete de software SEN2COR estándar. Para asegurar la comparabilidad con la serie LANDSAT, seleccionamos las bandas de resolución de distancia de muestreo de tierra de 10 m (GSD) (es decir, 2 azules, 3 verdes, 4 rojas, 8 infrarrojas cercanas) junto con las bandas GSD de 20 m (es decir, 11 de onda corta-infrarrojo-1, 12 de onda corta-infrarrojo-2) muestreados a 10 m GSD por KNN usando QGIS.
+Las imágenes satelitales para ambos datasets consisten de 26 imágenes SENTINEL 2A obtenidas del ESA SCIENTIFIC DATA HUB. Los datos se corrigieron atmosféricamente utilizando el paquete de software SEN2COR estándar. Para asegurar la comparabilidad con la serie LANDSAT, seleccionamos las bandas de resolución de distancia de muestreo de tierra de 10 m (GSD) (es decir, 2 azules, 3 verdes, 4 rojas, 8 infrarrojas cercanas) junto con las bandas GSD de 20 m (es decir, 11 de onda corta-infrarrojo-1, 12 de onda corta-infrarrojo-2) muestreados a 10 m GSD por KNN usando QGIS. La data puede ser encontrada en el siguiente link: http://weegee.vision.ucmerced.edu/datasets/landuse.html
 
 IMPLEMENTACION:
 Configuración de hyper parametros θc = (lc, rc) 
