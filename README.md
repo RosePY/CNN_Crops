@@ -30,5 +30,7 @@ Aunque cada capa se podría inicializar con un número diferente de celdas, lo q
 # REFERENCIAS
  
 [1] I. Goodfellow, Y. Bengio, and A. Courville, Deep learning. MIT press, 2016
+
 [2] M. D. Zeiler and R. Fergus, “Visualizing and understanding convolutional networks,” in European conference on computer vision. Springer, 2014, pp. 818–833.
+
 [3] C. Szegedy, W. Liu, Y. Jia, P. Sermanet, S. Reed, D. Anguelov, D. Erhan, V. Vanhoucke, and A. Rabinovich, “Going deeper with convolutions, in Proceedings of the IEEE C
