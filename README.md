@@ -31,6 +31,15 @@ Los hiperparámetros se eligieron mediante una búsqueda de cuadrícula, de modo
 Aunque cada capa se podría inicializar con un número diferente de celdas, lo que podría beneficiar a la clasificación, optamos por mantener la complejidad de la búsqueda de grillas moderada y aplicar el mismo número de celdas a cada capa. Para reducir el sobreajuste en los datos de entrenamiento presentados, agregamos la normalización drop_out para mantener probabilidad pkeep = 0.5.
  θCNN = (3, 440) 
  
+ ## Especificaciones del Equipo
+
+* Intel(R) Core(TM) i7-4700MQ CPU @ 2.40GHz 64 bits
+* 8GB RAM
+* Ubuntu 16.04
+
+## Requerimientos
+* Instalar requerimientos.txt
+ 
  ## RESULTADOS:
  
  <img src="/images/entropia_cnn.png" alt="Screenshot4"/>
