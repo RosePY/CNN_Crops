@@ -3,7 +3,7 @@
 * Rosa Yuliana Gabriela Paccotacya Yanque
 * Olenka Verónika Vargas Lazarte
 
-# CLASIFICACION DE CULTIVOS CON CNN
+# CLASIFICACION DE CULTIVOS MONOTEMPORALES CON CNN
 
 ## EXPERIMENTOS
 
